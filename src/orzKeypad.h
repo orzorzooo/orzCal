@@ -12,7 +12,7 @@ const byte COLS = 4; // four columns
 const byte ROWS = 6; // four rows
 char keys[ROWS][COLS] = {
     {'A', 'B', 'C', 'D'},
-    {'E', 'X', '/', '-'},
+    {'E', '*', '/', '-'},
     {'7', '8', '9', '+'},
     {'4', '5', '6', '+'},
     {'1', '2', '3', '+'},
