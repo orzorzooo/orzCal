@@ -1,3 +1,5 @@
+#ifndef display_h
+#define display_h
 #include <U8g2lib.h>
 U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/U8X8_PIN_NONE, /* clock=*/22, /* data=*/21); // ESP32 Thing, HW I2C with pin remapping
 
@@ -20,3 +22,4 @@ void showTest()
 
 	} while (u8g2.nextPage());
 }
+#endif

@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include "display.h"
 #include "orzKeypad.h"
+#include "calBehavior.h"
 
 void setup()
 {
@@ -16,14 +17,15 @@ void loop()
   char key = keypad.getKey();
   if (key)
   {
-    Serial.println(key);
-    u8g2.firstPage();
-    do
-    {
-      u8g2.setCursor(24, 24);
-      u8g2.println(key);
+    cal(key);
+    // Serial.println(key);
+    // u8g2.firstPage();
+    // do
+    // {
+    //   u8g2.setCursor(24, 24);
+    //   u8g2.println(key);
 
-    } while (u8g2.nextPage());
+    // } while (u8g2.nextPage());
   }
   // put your main code here, to run repeatedly:
 }
