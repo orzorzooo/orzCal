@@ -19,10 +19,15 @@ void cal(char key)
 			u8g2.firstPage();
 			do
 			{
-				u8g2.setCursor(0, 24);
-				u8g2.println(num1);
-
+				showNum(num1, 1);
 			} while (u8g2.nextPage());
+			// u8g2.firstPage();
+			// do
+			// {
+			// 	u8g2.setCursor(0, 24);
+			// 	u8g2.println(num1);
+
+			// } while (u8g2.nextPage());
 
 			Serial.println(num1);
 		}
@@ -33,11 +38,9 @@ void cal(char key)
 			u8g2.firstPage();
 			do
 			{
-				u8g2.setCursor(0, 24);
-				u8g2.println(num2);
-				final = true;
-
+				showNum(num2, 1);
 			} while (u8g2.nextPage());
+			final = true;
 			Serial.println(num2);
 		}
 	}
@@ -48,13 +51,21 @@ void cal(char key)
 		{
 			presentValue = true;
 			op = key;
+			String sop(op);
+			u8g2.firstPage();
 			do
 			{
-				u8g2.setCursor(0, 24);
-				u8g2.println(op);
-
+				showNum("fuck", 1);
 			} while (u8g2.nextPage());
+
+			// do
+			// {
+			// 	u8g2.setCursor(0, 24);
+			// 	u8g2.println(op);
+
+			// } while (u8g2.nextPage());
 		}
+		showNum("fuck", 1);
 		Serial.println(op);
 	}
 
